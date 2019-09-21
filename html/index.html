@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="main">
+        <span><input type="number" min="0" id="js-minute" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"></span>
+        <span>:</span>
+        <span><input type="number" min="0" max="59" id="js-second" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"></span>
+        <div id="startButton">
+            <button id="js-reset">재설정</button>
+            <button id="js-start" class="showing">시작</button>
+            <button id="js-stop">중지</button>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>if you want to stop, click me!</p>
+            <button id="myBtn">STOP</button>
+        </div>
+    </div>
+    <script src="../js/alarm.js"></script>
+</body>
+</html>
